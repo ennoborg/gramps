@@ -161,7 +161,7 @@ class EventModel(FlatBaseModel):
             if date_str != "":
                 retval = escape(date_str)
             else:
-                retval = ''
+                retval = ""
             if not get_date_valid(event):
                 return INVALID_DATE_FORMAT % retval
             else:
