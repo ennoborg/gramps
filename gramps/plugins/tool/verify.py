@@ -727,7 +727,8 @@ class VerifyResults(ManagedWindow):
                 msg = self.filt_model.get_value(child_iter, VerifyResults.WARNING_COL)
                 num = self.filt_model.iter_n_children(parent_iter)
                 real_parent_iter = self.filt_model.convert_iter_to_child_iter(
-                    parent_iter)
+                    parent_iter
+                )
                 self.set_parent_text(real_parent_iter, msg, num)
             parent_iter = self.filt_model.iter_next(parent_iter)
 
@@ -739,9 +740,10 @@ class VerifyResults(ManagedWindow):
         while parent_iter:
             sort_path = self.sort_model.get_path(parent_iter)
             if self.warn_tree.row_expanded(sort_path):
-                filt_path = self.sort_model.convert_path_to_child_path(sort_path);
+                filt_path = self.sort_model.convert_path_to_child_path(sort_path)
                 expanded_paths.append(
-                    self.filt_model.convert_path_to_child_path(filt_path))
+                    self.filt_model.convert_path_to_child_path(filt_path)
+                )
             parent_iter = self.sort_model.iter_next(parent_iter)
 
         self.filt_model = self.real_model.filter_new()
@@ -790,8 +792,9 @@ class VerifyResults(ManagedWindow):
                 child_iter = self.real_model.iter_next(child_iter)
         else:
             parent_iter = self.real_model.iter_parent(row.iter)
-            parent_ignore = self.real_model.get_value(parent_iter,
-                                                      VerifyResults.IGNORE_COL)
+            parent_ignore = self.real_model.get_value(
+                parent_iter, VerifyResults.IGNORE_COL
+            )
             if parent_ignore and not ignore:
                 # remove the parents selection when a child becomes no longer selected
                 self.set_row_selection(parent_iter, False)
@@ -805,8 +808,9 @@ class VerifyResults(ManagedWindow):
                         #   the model so we can't read it from there
                         value = ignore
                     else:
-                        value = self.real_model.get_value(child_iter,
-                                                          VerifyResults.IGNORE_COL)
+                        value = self.real_model.get_value(
+                            child_iter, VerifyResults.IGNORE_COL
+                        )
                     if not value:
                         all_ignored = False
                         break
@@ -828,7 +832,7 @@ class VerifyResults(ManagedWindow):
         parent_iter = self.real_model.get_iter_first()
         while parent_iter:
             ignore = self.real_model.get_value(parent_iter, VerifyResults.IGNORE_COL)
-            if ( mark and not ignore ) or not mark:
+            if (mark and not ignore) or not mark:
                 # if the parent should be selected but is already selected skip it
                 # if the selection should be removed we must always loop through
                 #   all children
@@ -856,8 +860,9 @@ class VerifyResults(ManagedWindow):
             child_iter = self.real_model.iter_children(parent_iter)
             all_ignored = True
             while child_iter:
-                ignore = not self.real_model.get_value(child_iter,
-                                                       VerifyResults.IGNORE_COL)
+                ignore = not self.real_model.get_value(
+                    child_iter, VerifyResults.IGNORE_COL
+                )
                 if not ignore:
                     all_ignored = False
                 self.set_row_selection(child_iter, ignore)
@@ -934,7 +939,7 @@ class VerifyResults(ManagedWindow):
                     line_color,
                     True,
                     True,
-                ]
+                ],
             )
             self.parent_iter_cache[msg] = parent_iter
 
@@ -951,7 +956,7 @@ class VerifyResults(ManagedWindow):
                 line_color,
                 True,
                 not ignore,
-            ]
+            ],
         )
 
         num = self.real_model.iter_n_children(parent_iter)
