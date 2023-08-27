@@ -492,7 +492,6 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
                 if rule.broken():
                     self.add_results(rule.report_itself())
 
-            clear_cache()
             if not cli:
                 self.update()
 
@@ -526,10 +525,10 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
                 if rule.broken():
                     self.add_results(rule.report_itself())
 
-            clear_cache()
             if not cli:
                 self.update()
 
+        clear_cache()
 
 # -------------------------------------------------------------------------
 #
