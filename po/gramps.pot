@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-24 22:33+0100\n"
+"POT-Creation-Date: 2023-08-27 16:41+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -7726,7 +7726,7 @@ msgstr ""
 #: ../gramps/plugins/tool/dumpgenderstats.py:101
 #: ../gramps/plugins/tool/notrelated.py:130
 #: ../gramps/plugins/tool/removeunused.py:224
-#: ../gramps/plugins/tool/verify.py:634 ../gramps/plugins/view/repoview.py:86
+#: ../gramps/plugins/tool/verify.py:658 ../gramps/plugins/view/repoview.py:86
 #: ../gramps/plugins/webreport/basepage.py:519
 #: ../gramps/plugins/webreport/person.py:419
 #: ../gramps/plugins/webreport/person.py:2282
@@ -12647,7 +12647,7 @@ msgstr ""
 #: ../gramps/plugins/tool/notrelated.py:131
 #: ../gramps/plugins/tool/patchnames.py:457
 #: ../gramps/plugins/tool/removeunused.py:217
-#: ../gramps/plugins/tool/sortevents.py:62 ../gramps/plugins/tool/verify.py:624
+#: ../gramps/plugins/tool/sortevents.py:62 ../gramps/plugins/tool/verify.py:648
 #: ../gramps/plugins/view/citationlistview.py:101
 #: ../gramps/plugins/view/citationtreeview.py:96
 #: ../gramps/plugins/view/eventview.py:82
@@ -17421,7 +17421,7 @@ msgstr ""
 msgid "No spouses or children found"
 msgstr ""
 
-#: ../gramps/gui/merge/mergeperson.py:372 ../gramps/plugins/tool/verify.py:614
+#: ../gramps/gui/merge/mergeperson.py:372 ../gramps/plugins/tool/verify.py:638
 msgid "Warning"
 msgstr ""
 
@@ -29946,7 +29946,7 @@ msgstr ""
 
 #: ../gramps/plugins/quickview/lineage.py:169
 #: ../gramps/plugins/quickview/lineage.py:191
-#: ../gramps/plugins/tool/verify.py:1179
+#: ../gramps/plugins/tool/verify.py:1353
 msgid "Unknown gender"
 msgstr ""
 
@@ -32553,7 +32553,7 @@ msgstr ""
 
 #: ../gramps/plugins/tool/finddupes.py:147
 #: ../gramps/plugins/tool/mergecitations.py:170
-#: ../gramps/plugins/tool/verify.py:383
+#: ../gramps/plugins/tool/verify.py:397
 msgid "Tool settings"
 msgstr ""
 
@@ -33191,7 +33191,7 @@ msgid "Unused Objects"
 msgstr ""
 
 #: ../gramps/plugins/tool/removeunused.py:205
-#: ../gramps/plugins/tool/verify.py:602
+#: ../gramps/plugins/tool/verify.py:626
 msgid "Mark"
 msgstr ""
 
@@ -33639,182 +33639,214 @@ msgstr ""
 msgid "Maximum _span of years for all children"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.glade:984 ../gramps/plugins/tool/verify.py:725
+#: ../gramps/plugins/tool/verify.glade:984 ../gramps/plugins/tool/verify.py:780
 msgid "_Hide marked"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:90
+#: ../gramps/plugins/tool/verify.py:92
 msgctxt "manual"
 msgid "Verify_the_Data"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:322
+#: ../gramps/plugins/tool/verify.py:336
 msgid "Data Verify tool"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:346
+#: ../gramps/plugins/tool/verify.py:360
 #, python-format
 msgid "%(severity)s: %(msg)s, %(type)s: %(gid)s, %(name)s"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:543
+#: ../gramps/plugins/tool/verify.py:565
 msgid "Data Verification Results"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:722
+#: ../gramps/plugins/tool/verify.py:777
 msgid "_Show all"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1043
+#: ../gramps/plugins/tool/verify.py:1217
 msgid "Baptism before birth"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1062
+#: ../gramps/plugins/tool/verify.py:1236
 msgid "Death before baptism"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1081
+#: ../gramps/plugins/tool/verify.py:1255
 msgid "Burial before birth"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1100
+#: ../gramps/plugins/tool/verify.py:1274
 msgid "Burial before death"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1119
+#: ../gramps/plugins/tool/verify.py:1293
 msgid "Death before birth"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1138
+#: ../gramps/plugins/tool/verify.py:1312
 msgid "Burial before baptism"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1164
+#: ../gramps/plugins/tool/verify.py:1338
 msgid "Old age at death"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1195
+#: ../gramps/plugins/tool/verify.py:1369
 msgid "Multiple parents"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1220
+#: ../gramps/plugins/tool/verify.py:1394
 msgid "Married often"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1247
+#: ../gramps/plugins/tool/verify.py:1421
 msgid "Old and unmarried"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1280
+#: ../gramps/plugins/tool/verify.py:1454
 msgid "Too many children"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1299
+#: ../gramps/plugins/tool/verify.py:1473
 msgid "Same sex marriage"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1315
+#: ../gramps/plugins/tool/verify.py:1489
 msgid "Female husband"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1331
+#: ../gramps/plugins/tool/verify.py:1505
 msgid "Male wife"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1365
+#: ../gramps/plugins/tool/verify.py:1539
 msgid "Husband and wife with the same surname"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1397
+#: ../gramps/plugins/tool/verify.py:1571
 msgid "Large age difference between spouses"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1438
+#: ../gramps/plugins/tool/verify.py:1612
 msgid "Marriage before birth"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1479
+#: ../gramps/plugins/tool/verify.py:1653
 msgid "Marriage after death"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1530
+#: ../gramps/plugins/tool/verify.py:1704
 msgid "Early marriage"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1576
+#: ../gramps/plugins/tool/verify.py:1750
 msgid "Late marriage"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1628
+#: ../gramps/plugins/tool/verify.py:1802
 msgid "Old father"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1632
+#: ../gramps/plugins/tool/verify.py:1806
 msgid "Old mother"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1684
+#: ../gramps/plugins/tool/verify.py:1858
 msgid "Young father"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1688
+#: ../gramps/plugins/tool/verify.py:1862
 msgid "Young mother"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1737
+#: ../gramps/plugins/tool/verify.py:1911
 msgid "Unborn father"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1741
+#: ../gramps/plugins/tool/verify.py:1915
 msgid "Unborn mother"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1798
+#: ../gramps/plugins/tool/verify.py:1972
 msgid "Dead father"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1802
+#: ../gramps/plugins/tool/verify.py:1976
 msgid "Dead mother"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1832
+#: ../gramps/plugins/tool/verify.py:2006
 msgid "Large year span for all children"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1863
+#: ../gramps/plugins/tool/verify.py:2037
 msgid "Large age differences between children"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1882
+#: ../gramps/plugins/tool/verify.py:2056
 msgid "Disconnected individual"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1912
+#: ../gramps/plugins/tool/verify.py:2086
 msgid "Invalid birth date"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1942
+#: ../gramps/plugins/tool/verify.py:2116
 msgid "Invalid death date"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1965
+#: ../gramps/plugins/tool/verify.py:2139
 msgid "Marriage date but not married"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:1996
+#: ../gramps/plugins/tool/verify.py:2170
 msgid "Old age but no death"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:2015
+#: ../gramps/plugins/tool/verify.py:2189
 msgid "Birth equals death"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:2036
+#: ../gramps/plugins/tool/verify.py:2210
 msgid "Birth equals marriage"
 msgstr ""
 
-#: ../gramps/plugins/tool/verify.py:2057
+#: ../gramps/plugins/tool/verify.py:2231
 msgid "Death equals marriage"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2293
+msgid "Baptism too late according to family tradition"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2319
+msgid "Burial too late"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2355
+msgid "Children are not ordered chronological"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2411
+msgid "Families are not ordered chronological"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2427
+msgid "Family has events of type Unknown"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2443
+msgid "Person has events of type Unknown"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2470
+msgid "Family events not ordered chronological"
+msgstr ""
+
+#: ../gramps/plugins/tool/verify.py:2497
+msgid "Person events not ordered chronological"
 msgstr ""
 
 #: ../gramps/plugins/view/citationlistview.py:107
