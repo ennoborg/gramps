@@ -100,36 +100,25 @@ _family_cache = {}
 _event_cache = {}
 _today = Today().get_sort_value()
 
-
 def find_event(db, handle):
     """find an event, given a handle"""
-    if handle in _event_cache:
-        obj = _event_cache[handle]
-    else:
-        obj = db.get_event_from_handle(handle)
-        _event_cache[handle] = obj
-    return obj
-
+    return _event_cache[handle]
 
 def find_person(db, handle):
     """find a person, given a handle"""
-    if handle in _person_cache:
-        obj = _person_cache[handle]
-    else:
-        obj = db.get_person_from_handle(handle)
-        _person_cache[handle] = obj
-    return obj
-
+    return _person_cache[handle]
 
 def find_family(db, handle):
     """find a family, given a handle"""
-    if handle in _family_cache:
-        obj = _family_cache[handle]
-    else:
-        obj = db.get_family_from_handle(handle)
-        _family_cache[handle] = obj
-    return obj
+    return _family_cache[handle]
 
+def preload_cache(db):
+    for person in db.iter_people():
+        _person_cache[person.get_handle()] = person
+    for family in db.iter_families():
+        _family_cache[family.get_handle()] = family
+    for event in db.iter_events():
+        _event_cache[event.get_handle()] = event
 
 def clear_cache():
     """clear the cache"""
@@ -444,8 +433,8 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
     def run_the_tool(self, cli=False):
         """run the tool"""
 
-        person_handles = self.db.iter_person_handles()
-
+        preload_cache(self.db)
+        
         for option, value in self.options.handler.options_dict.items():
             exec("%s = %s" % (option, value), globals())
             # TODO my pylint doesn't seem to understand these variables really
@@ -458,9 +447,8 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
             self.db.get_number_of_people() + self.db.get_number_of_families()
         )
 
-        for person_handle in person_handles:
-            person = find_person(self.db, person_handle)
-
+        for handle, person in _person_cache.items():
+            
             rule_list = [
                 BirthAfterBapt(self.db, person),
                 DeathBeforeBapt(self.db, person),
