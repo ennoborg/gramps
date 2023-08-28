@@ -98,6 +98,7 @@ WIKI_HELP_SEC = _("Verify_the_Data", "manual")
 _person_cache = {}
 _family_cache = {}
 _event_cache = {}
+_persons_event_cache = {}
 _today = Today().get_sort_value()
 
 def find_event(db, handle):
@@ -113,18 +114,34 @@ def find_family(db, handle):
     return _family_cache[handle]
 
 def preload_cache(db):
-    for person in db.iter_people():
-        _person_cache[person.get_handle()] = person
-    for family in db.iter_families():
-        _family_cache[family.get_handle()] = family
     for event in db.iter_events():
         _event_cache[event.get_handle()] = event
+
+    for person in db.iter_people():
+        _person_cache[person.get_handle()] = person
+        for event_ref in person.get_primary_event_ref_list():
+            event = _event_cache[event_ref.ref]
+            if event:
+                etype = event.get_type()
+                if (
+                    etype == EventType.BAPTISM
+                    or etype == EventType.CHRISTEN
+                    or etype == EventType.BURIAL
+                ):
+                    if person.get_handle() not in _persons_event_cache:
+                        _persons_event_cache[person.get_handle()] = {}
+                    if int(etype) not in _persons_event_cache[person.get_handle()]:
+                        _persons_event_cache[person.get_handle()][int(etype)] = event.get_handle()
+
+    for family in db.iter_families():
+        _family_cache[family.get_handle()] = family
 
 def clear_cache():
     """clear the cache"""
     _person_cache.clear()
     _family_cache.clear()
     _event_cache.clear()
+    _persons_event_cache.clear()
 
 
 # -------------------------------------------------------------------------
@@ -149,11 +166,9 @@ def get_date_from_event_type(db, person, event_type, estimate=False):
     """get a date from a person's specific event type"""
     if not person:
         return 0
-    for event_ref in person.get_event_ref_list():
+    for event_ref in person.get_primary_event_ref_list():
         event = find_event(db, event_ref.ref)
         if event:
-            if event_ref.get_role() != EventRoleType.PRIMARY:
-                continue
             if event.get_type() == event_type:
                 date_obj = event.get_date_object()
                 if not estimate and (
@@ -166,15 +181,28 @@ def get_date_from_event_type(db, person, event_type, estimate=False):
 
 def get_bapt_date(db, person, estimate=False):
     """get a person's baptism date"""
-    bapt_date = get_date_from_event_type(db, person, EventType.BAPTISM, estimate)
-    if bapt_date == 0:
-        return get_date_from_event_type(db, person, EventType.CHRISTEN, estimate)
-    return bapt_date
+    if person.get_handle() not in _persons_event_cache:
+        return 0
+    
+    events = _persons_event_cache[person.get_handle()]
+    if int(EventType.BAPTISM) in events:
+        return get_date_from_event_handle(db, events[int(EventType.BAPTISM)], estimate)
+    
+    if int(EventType.CHRISTEN) in events:
+        return get_date_from_event_handle(db, events[int(EventType.CHRISTEN)], estimate)
 
+    return 0
 
 def get_bury_date(db, person, estimate=False):
     """get a person's burial date"""
-    return get_date_from_event_type(db, person, EventType.BURIAL, estimate)
+    if person.get_handle() not in _persons_event_cache:
+        return 0
+    
+    events = _persons_event_cache[person.get_handle()]
+    if int(EventType.BURIAL) in events:
+        return get_date_from_event_handle(db, events[int(EventType.BURIAL)], estimate)
+    
+    return 0
 
 
 def get_birth_date(db, person, estimate=False):
@@ -2052,7 +2080,7 @@ class InvalidBirthDate(PersonRule):
         person = self.obj
         birth_ref = person.get_birth_ref()
         if birth_ref:
-            birth_event = self.db.get_event_from_handle(birth_ref.ref)
+            birth_event = find_event(self.db, birth_ref.ref)
             birth_date = birth_event.get_date_object()
             if birth_date and not birth_date.get_valid():
                 return True
@@ -2082,7 +2110,7 @@ class InvalidDeathDate(PersonRule):
         person = self.obj
         death_ref = person.get_death_ref()
         if death_ref:
-            death_event = self.db.get_event_from_handle(death_ref.ref)
+            death_event = find_event(self.db, death_ref.ref)
             death_date = death_event.get_date_object()
             if death_date and not death_date.get_valid():
                 return True
@@ -2177,7 +2205,7 @@ class BirthEqualsMarriage(PersonRule):
         birth_date = get_birth_date(self.db, self.obj)
         birth_ok = birth_date > 0 if birth_date is not None else False
         for fhandle in self.obj.get_family_handle_list():
-            family = self.db.get_family_from_handle(fhandle)
+            family = find_family(self.db, fhandle)
             marr_date = get_marriage_date(self.db, family)
             marr_ok = marr_date > 0 if marr_date is not None else False
             return marr_ok and birth_ok and birth_date == marr_date
@@ -2198,7 +2226,7 @@ class DeathEqualsMarriage(PersonRule):
         death_date = get_death_date(self.db, self.obj)
         death_ok = death_date > 0 if death_date is not None else False
         for fhandle in self.obj.get_family_handle_list():
-            family = self.db.get_family_from_handle(fhandle)
+            family = find_family(self.db, fhandle)
             marr_date = get_marriage_date(self.db, family)
             marr_ok = marr_date > 0 if marr_date is not None else False
             return marr_ok and death_ok and death_date == marr_date
