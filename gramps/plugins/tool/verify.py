@@ -434,7 +434,7 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
         """run the tool"""
 
         preload_cache(self.db)
-        
+
         for option, value in self.options.handler.options_dict.items():
             exec("%s = %s" % (option, value), globals())
             # TODO my pylint doesn't seem to understand these variables really
@@ -448,7 +448,7 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
         )
 
         for handle, person in _person_cache.items():
-            
+
             rule_list = [
                 BirthAfterBapt(self.db, person),
                 DeathBeforeBapt(self.db, person),
