@@ -99,7 +99,6 @@ WIKI_HELP_SEC = _("Verify_the_Data", "manual")
 _person_cache = LRU(100000)
 _family_cache = LRU(100000)
 _event_cache = LRU(200000)
-_persons_event_cache = LRU(100000)
 _today = Today().get_sort_value()
 
 def find_event(db, handle):
@@ -136,21 +135,7 @@ def preload_cache(db):
         _event_cache[event.get_handle()] = event
 
     for person in db.iter_people():
-        person_handle = person.get_handle()
-        _person_cache[person_handle] = person
-        for event_ref in person.get_primary_event_ref_list():
-            event = find_event(db, event_ref.ref)
-            if event:
-                etype = event.get_type()
-                if (
-                    etype == EventType.BAPTISM
-                    or etype == EventType.CHRISTEN
-                    or etype == EventType.BURIAL
-                ):
-                    if person_handle not in _persons_event_cache:
-                        _persons_event_cache[person_handle] = {}
-                    if int(etype) not in _persons_event_cache[person_handle]:
-                        _persons_event_cache[person_handle][int(etype)] = event.get_handle()
+        _person_cache[person.get_handle()] = person
 
     for family in db.iter_families():
         _family_cache[family.get_handle()] = family
@@ -160,7 +145,6 @@ def clear_cache():
     _person_cache.clear()
     _family_cache.clear()
     _event_cache.clear()
-    _persons_event_cache.clear()
 
 
 # -------------------------------------------------------------------------
@@ -168,41 +152,52 @@ def clear_cache():
 # helper functions
 #
 # -------------------------------------------------------------------------
+def get_date_sort_value(date_obj, estimate):
+    """extract the sort_value of a date considering estimation"""
+    if not estimate and (date_obj.get_day() == 0 or date_obj.get_month() == 0):
+        return 0
+    return date_obj.get_sort_value()
+
 def get_date_from_event_handle(db, event_handle, estimate=False):
     """get a date from an event handle"""
     if not event_handle:
         return 0
     event = find_event(db, event_handle)
     if event:
-        date_obj = event.get_date_object()
-        if not estimate and (date_obj.get_day() == 0 or date_obj.get_month() == 0):
-            return 0
-        return date_obj.get_sort_value()
+        return get_date_sort_value(event.get_date_object(), estimate)
     return 0
+
+def get_person_dates(db, person, estimate):
+    person_dates = {}
+    for event_ref in person.get_primary_event_ref_list():
+        event = find_event(db, event_ref.ref)
+        if event:
+            etype = event.get_type()
+            if (
+                etype == EventType.BAPTISM
+                or etype == EventType.CHRISTEN
+                or etype == EventType.BURIAL
+            ):
+                person_dates[int(event.get_type())] = get_date_sort_value(event.get_date_object(), estimate)
+
+    return person_dates
+
 
 def get_bapt_date(db, person, estimate=False):
     """get a person's baptism date"""
-    if person.get_handle() not in _persons_event_cache:
-        return 0
-    
-    events = _persons_event_cache[person.get_handle()]
-    if int(EventType.BAPTISM) in events:
-        return get_date_from_event_handle(db, events[int(EventType.BAPTISM)], estimate)
-    
-    if int(EventType.CHRISTEN) in events:
-        return get_date_from_event_handle(db, events[int(EventType.CHRISTEN)], estimate)
-
+    person_dates = get_person_dates(db, person, estimate)
+    if int(EventType.BAPTISM) in person_dates:
+        return person_dates[int(EventType.BAPTISM)]
+    elif int(EventType.CHRISTEN) in person_dates:
+        return person_dates[int(EventType.CHRISTEN)]
     return 0
+
 
 def get_bury_date(db, person, estimate=False):
     """get a person's burial date"""
-    if person.get_handle() not in _persons_event_cache:
-        return 0
-    
-    events = _persons_event_cache[person.get_handle()]
-    if int(EventType.BURIAL) in events:
-        return get_date_from_event_handle(db, events[int(EventType.BURIAL)], estimate)
-    
+    person_dates = get_person_dates(db, person, estimate)
+    if int(EventType.BURIAL) in person_dates:
+        return person_dates[int(EventType.BURIAL)]
     return 0
 
 
