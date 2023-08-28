@@ -81,6 +81,7 @@ from gramps.gui.managedwindow import ManagedWindow
 from gramps.gen.updatecallback import UpdateCallback
 from gramps.gui.plug import tool
 from gramps.gui.glade import Glade
+from gramps.gen.utils.lru import LRU
 
 # -------------------------------------------------------------------------
 #
@@ -95,32 +96,50 @@ WIKI_HELP_SEC = _("Verify_the_Data", "manual")
 # temp storage and related functions
 #
 # -------------------------------------------------------------------------
-_person_cache = {}
-_family_cache = {}
-_event_cache = {}
-_persons_event_cache = {}
+_person_cache = LRU(100000)
+_family_cache = LRU(100000)
+_event_cache = LRU(200000)
+_persons_event_cache = LRU(100000)
 _today = Today().get_sort_value()
 
 def find_event(db, handle):
     """find an event, given a handle"""
-    return _event_cache[handle]
+    if handle in _event_cache:
+        obj = _event_cache[handle]
+    else:
+        obj = db.get_event_from_handle(handle)
+        _event_cache[handle] = obj
+    return obj
+
 
 def find_person(db, handle):
     """find a person, given a handle"""
-    return _person_cache[handle]
+    if handle in _person_cache:
+        obj = _person_cache[handle]
+    else:
+        obj = db.get_person_from_handle(handle)
+        _person_cache[handle] = obj
+    return obj
+
 
 def find_family(db, handle):
     """find a family, given a handle"""
-    return _family_cache[handle]
+    if handle in _family_cache:
+        obj = _family_cache[handle]
+    else:
+        obj = db.get_family_from_handle(handle)
+        _family_cache[handle] = obj
+    return obj
 
 def preload_cache(db):
     for event in db.iter_events():
         _event_cache[event.get_handle()] = event
 
     for person in db.iter_people():
-        _person_cache[person.get_handle()] = person
+        person_handle = person.get_handle()
+        _person_cache[person_handle] = person
         for event_ref in person.get_primary_event_ref_list():
-            event = _event_cache[event_ref.ref]
+            event = find_event(db, event_ref.ref)
             if event:
                 etype = event.get_type()
                 if (
@@ -128,10 +147,10 @@ def preload_cache(db):
                     or etype == EventType.CHRISTEN
                     or etype == EventType.BURIAL
                 ):
-                    if person.get_handle() not in _persons_event_cache:
-                        _persons_event_cache[person.get_handle()] = {}
-                    if int(etype) not in _persons_event_cache[person.get_handle()]:
-                        _persons_event_cache[person.get_handle()][int(etype)] = event.get_handle()
+                    if person_handle not in _persons_event_cache:
+                        _persons_event_cache[person_handle] = {}
+                    if int(etype) not in _persons_event_cache[person_handle]:
+                        _persons_event_cache[person_handle][int(etype)] = event.get_handle()
 
     for family in db.iter_families():
         _family_cache[family.get_handle()] = family
@@ -475,7 +494,8 @@ class Verify(tool.Tool, ManagedWindow, UpdateCallback):
             self.db.get_number_of_people() + self.db.get_number_of_families()
         )
 
-        for handle, person in _person_cache.items():
+        for person_handle in self.db.iter_person_handles():
+            person = find_person(self.db, person_handle)
 
             rule_list = [
                 BirthAfterBapt(self.db, person),
