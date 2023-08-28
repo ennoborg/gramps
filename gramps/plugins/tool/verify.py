@@ -180,24 +180,6 @@ def get_date_from_event_handle(db, event_handle, estimate=False):
         return date_obj.get_sort_value()
     return 0
 
-
-def get_date_from_event_type(db, person, event_type, estimate=False):
-    """get a date from a person's specific event type"""
-    if not person:
-        return 0
-    for event_ref in person.get_primary_event_ref_list():
-        event = find_event(db, event_ref.ref)
-        if event:
-            if event.get_type() == event_type:
-                date_obj = event.get_date_object()
-                if not estimate and (
-                    date_obj.get_day() == 0 or date_obj.get_month() == 0
-                ):
-                    return 0
-                return date_obj.get_sort_value()
-    return 0
-
-
 def get_bapt_date(db, person, estimate=False):
     """get a person's baptism date"""
     if person.get_handle() not in _persons_event_cache:
