@@ -202,11 +202,7 @@ class MergeCitations(tool.BatchTool, ManagedWindow):
             citation_handle_list = list(db.find_backlink_handles(handle))
             for class_name, citation_handle in citation_handle_list:
                 if class_name != Citation.__name__:
-                    raise MergeError(
-                        "Encountered an object of type %s "
-                        "that has a citation reference." % class_name
-                    )
-
+                    continue
                 citation = db.get_citation_from_handle(citation_handle)
                 if citation is None:
                     continue
