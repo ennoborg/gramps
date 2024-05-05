@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: Gramps 5.1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 22:29+0000\n"
-"PO-Revision-Date: 2024-04-23 17:37+0000\n"
-"Last-Translator: Nick Hall <nick-h@gramps-project.org>\n"
+"PO-Revision-Date: 2024-04-28 11:07+0000\n"
+"Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gramps-project/"
 "gramps/he/>\n"
 "Language: he\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 5.5.1\n"
 "X-Poedit-Bookmarks: 1508,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: ../data/holidays.xml:3
@@ -567,8 +567,8 @@ msgid ""
 msgstr ""
 "<b>דוחות גרמפס<br/></b>גרמפס מציע מגוון דוחות רחב. תרשימים ודוחות חזותיים "
 "ממחישים קשרי־קרבה מורכבים בקלות רבה. 'דוחות המלל' שימושיים במיוחד לשיתוף "
-"אילן־היוחסין עם בני משפחה נוספים באמצעות דוא״ל. ליצירת אתר מרשתת מאילן־"
-"היוחסין ולשתפו עם בני משפחה נוספים, ובכן, גם לכך קיים דוח מובנה."
+"אילן־היוחסין עם בני משפחה נוספים באמצעות דוא״ל. ליצירת אתר מרשתת "
+"מאילן־היוחסין ולשתפו עם בני משפחה נוספים, ובכן, גם לכך קיים דוח מובנה."
 
 #: ../data/tips.xml:36
 msgid ""
@@ -882,8 +882,8 @@ msgid ""
 msgstr ""
 "<b>תסדיר קובץ GEDCOM<br/></b>גרמפס מאפשרת לייבא ולייצא תסדיר GEDCOM. התעשייה "
 "מספקת תמיכה נרחבת לתקן GEDCOM גרסה 5.5, כך שניתן להחליף מידע בין גרמפס "
-"ואנשים אחרים המשתמשים בתוכנות חקר־יוחסין אחרות. מסננים מובנים הופכים את יבוא "
-"ויצוא קבצי ה־GEDCOM למשימה פשוטה."
+"ואנשים אחרים המשתמשים בתוכנות חקר־יוחסין אחרות. מסננים מובנים הופכים את "
+"ייבוא ויצוא קבצי ה־GEDCOM למשימה פשוטה."
 
 #: ../data/tips.xml:88
 msgid ""
@@ -1094,7 +1094,7 @@ msgid ""
 "Foundation and the Open Source Initiative."
 msgstr ""
 "<b>תוכנת קוד פתוח<br/></b>מודל הפיתוח החינמי/חופשי ובקוד פתוח (FLOSS) "
-"שפירושם, שכול מתכנת יכול להרחיב את גרמפס שכן קוד המקור זמין בחינם וברישיון. "
+"שפירושם, שכל מתכנת יכול להרחיב את גרמפס שכן קוד המקור זמין בחינם וברישיון. "
 "לכן לא מדובר רק על 'בירה' בחינם, אלא גם בחופש ללמוד ולשנות את הכלי. למידע "
 "נוסף על תוכנת קוד פתוח אפשר לחפש במרשתת על קרן התוכנה החופשית ויוזמת הקוד "
 "הפתוח."
@@ -5414,7 +5414,7 @@ msgid ""
 "Soundex Match of people with a specified name. First name, Surname, Call "
 "name, and Nickname are searched in primary and alternate names."
 msgstr ""
-"התאמת סאונד־אקס לאנשים בשם מסויים. חיפוש בסוגי שמות ראשיים וחלופיים, ובשמות "
+"התאמת סאונד־אקס לאנשים בשם מסוים. חיפוש בסוגי שמות ראשיים וחלופיים, ובשמות "
 "פרטיים, משפחה, ופניה."
 
 #: ../gramps/gen/filters/rules/person/_hassourcecount.py:47
@@ -6335,7 +6335,7 @@ msgstr "מקורות עם <מונה> פרטי מדיה"
 
 #: ../gramps/gen/filters/rules/source/_hasgallery.py:48
 msgid "Matches sources with a certain number of items in the gallery"
-msgstr "איתור מקורות להם מספר פריטי גלריה מסויים"
+msgstr "איתור מקורות להם מספר פריטי גלריה מסוים"
 
 #: ../gramps/gen/filters/rules/source/_hasidof.py:46
 msgid "Source with <Id>"
@@ -11880,7 +11880,7 @@ msgstr "דיכוי אזהרה בעת ביטול שינויים שטרם נשמר
 
 #: ../gramps/gui/configure.py:1031
 msgid "Suppress warning about missing researcher when exporting to GEDCOM"
-msgstr "דיכוי אזהרה בעת יצוא לג'דקום, לגבי חוקר חסר"
+msgstr "דיכוי אזהרה בעת ייצוא לג'דקום, לגבי חוקר חסר"
 
 #: ../gramps/gui/configure.py:1039
 msgid "Suppress tooltip warnings about data being saved immediately"
@@ -16275,7 +16275,7 @@ msgstr "מידע על קשר־קרבה"
 
 #: ../gramps/gui/glade/editfamily.glade:683
 msgid "A unique ID for the family"
-msgstr "מזהה יחידי למשפחה"
+msgstr "מזהה ייחודי למשפחה"
 
 #: ../gramps/gui/glade/editfamily.glade:698
 #: ../gramps/gui/glade/editname.glade:102
@@ -16549,14 +16549,14 @@ msgid ""
 "call name is not part of Given name and will not be printed underlined in "
 "some reports."
 msgstr ""
-"כאשר לאדם יותר משם פרטי אחד (דוד־חיים, רבקה־חייה), אותו חלק מהשם הפרטי בו "
-"נוהגים לפנות אליו בדרך כלל. אם רקע שדה השם צבוע אדום, משמע ש'שם פניה' לא "
+"כאשר לאדם יותר משם פרטי אחד (דוד־חיים, רבקה־חיה), אותו חלק מהשם הפרטי בו "
+"נוהגים לפנות אליו בדרך כלל. אם רקע שדה השם צבוע אדום, משמע ש'שם פנייה' לא "
 "נכלל ב'שם הפרטי' ולכן גם לא יודפס מודגש בקו תחתון במקצת הדוחות."
 
 #: ../gramps/gui/glade/editname.glade:291
 #: ../gramps/gui/glade/editperson.glade:211
 msgid "A title used to refer to the person, such as 'Dr.' or 'Rev.'"
-msgstr "הפנייה לאדם זה, כגון: 'ד״ר', 'רבי', 'כומר'"
+msgstr "הפניה לאדם זה, כגון: 'ד״ר', 'רבי', 'כומר'"
 
 #: ../gramps/gui/glade/editname.glade:304
 #: ../gramps/gui/glade/editperson.glade:225
@@ -16637,7 +16637,7 @@ msgid ""
 msgstr ""
 "מצג 'אנשים' (בתצוגת עץ) מקבץ אנשים בעלי שם משפחה ראשי זהה. ניתן לעקוף זאת "
 "על־ידי הגדרת 'ערך קבוצה'.\n"
-"המערכת תישאל האם לקבץ אדם זה בלבד, או את כל האנשים בעלי שם משפחה ראשי מסויים "
+"המערכת תישאל האם לקבץ אדם זה בלבד, או את כל האנשים בעלי שם משפחה ראשי מסוים "
 "זה."
 
 #: ../gramps/gui/glade/editname.glade:616
@@ -16764,10 +16764,10 @@ msgid ""
 "occasions. Events can be shared between people, each indicating their role "
 "in the event."
 msgstr ""
-"תיאור התסמיך. לדוגמה, סנדק, חבר, עד, ...\n"
+"תיאור התסמיך, לדוגמה. סנדק, חבר, ...\n"
 "\n"
-"הערה: ניתן להשתמש באירועים במקום קשרי־קרבה שקשרים למסגרות זמן או נסיבות "
-"מסויימות. ניתן לשתף אירועים בין אנשים ולציין את תפקידו של ה'אדם'באירוע."
+"הערה: ניתן להשתמש באירועים במקום קשרי־קרבה שקשורים למסגרות זמן או נסיבות "
+"מסוימות, לשתף אירועים בין אנשים ולציין את תפקידו של ה'אדם' באירוע."
 
 #: ../gramps/gui/glade/editpersonref.glade:146
 msgid ""
@@ -16812,8 +16812,8 @@ msgstr ""
 "קו רוחב (מיקום מעל קו המשווה) של המקום בערכים עשרוניים או מעלות.\n"
 "לדוגמה, ערכים חוקיים יהיו 12.0154, 50 ° 52 ′ 21.92 \"N, N50 ° 52 ′ 21.92\" "
 "או 50:52:21.92\n"
-"ניתן להגדיר ערכים אלה ממצג 'גאוגרפיה' על־ידי חיפוש מקום, או באמצעות שירות "
-"מפה ממצג 'מקום'."
+"ניתן להגדיר ערכים אלה ממצג 'גאוגרפיה' על־ידי חיפוש מקום, או באמצעות שרות מפה "
+"ממצג 'מקום'."
 
 #: ../gramps/gui/glade/editplace.glade:194
 #: ../gramps/gui/glade/editplaceref.glade:477
@@ -16829,8 +16829,8 @@ msgstr ""
 "במעלות.\n"
 "לדוגמה, ערכים חוקיים יהיו: 124.3647-, E124 ° 52 ′ 21.92, ‏124°52′21.92″E, או "
 "124:52:21.92\n"
-"ניתן להגדיר ערכים אלה ממצג 'גאוגרפיה' על־ידי חיפוש מקום, או באמצעות שירות "
-"מפה ממצג 'מקום'."
+"ניתן להגדיר ערכים אלה ממצג 'גאוגרפיה' על־ידי חיפוש מקום, או באמצעות שרות מפה "
+"ממצג 'מקום'."
 
 #: ../gramps/gui/glade/editplace.glade:215
 #: ../gramps/gui/glade/editplaceref.glade:353
@@ -16920,7 +16920,7 @@ msgid ""
 "reflected in the place itself, for places that it encloses."
 msgstr ""
 "<b>הערה:</b> כל שינוי מידע במקומות שמכילים בתוכם מקומות אחרים, ישתקף במקום "
-"עצמו ובכול המקומות המוכלים בתוכו."
+"עצמו ובכל המקומות המוכלים בתוכו."
 
 #: ../gramps/gui/glade/editreporef.glade:128
 msgid "_Media Type:"
@@ -16956,7 +16956,7 @@ msgid ""
 "reflected in the repository itself, for all items that reference the "
 "repository."
 msgstr ""
-"<b>הערה:</b> כל שינוי מידע במאגריםמשותפים ישתקף במאגר עצמו ובכול הפריטים "
+"<b>הערה:</b> כל שינוי מידע במאגרים משותפים ישתקף במאגר עצמו ובכל הפריטים "
 "שמפנים למאגר."
 
 #: ../gramps/gui/glade/editreporef.glade:371
@@ -17443,7 +17443,7 @@ msgstr "העברת הורה מטה"
 
 #: ../gramps/gui/glade/reorder.glade:205
 msgid "Family relationships"
-msgstr "קשרי־קרבה משפחה"
+msgstr "קשרים משפחתיים"
 
 #: ../gramps/gui/glade/reorder.glade:267
 msgid "Move family up"
@@ -17804,16 +17804,16 @@ msgid ""
 "If you close this dialog now, you can install addons later from the menu "
 "under Edit -> Addon Manager."
 msgstr ""
-"חבלת גרמפס כוללת בתוכה את ערכת הליבה ומתקעים שמספקים את כל התכונות הדרושות. "
+"חבילת גרמפס כוללת בתוכה את ערכת הליבה ומתקעים שמספקים את כל התכונות הדרושות. "
 "בנוסף, ניתן להרחיב את יכולות המערכת מעבר לכך, על־ידי תוספים נוספים. תוספים "
 "אלו כוללים, דוחות, רישומות, מצגים, גרמפלטים, ועוד. מכאן ניתן לבחור בין כלל "
 "התוספים הזמינים, אלו, יאוחזרו מהמרשתת מאתר נפרד לאתר גרמפס, ויותקנו באופן "
 "מקומי במחשב. ניתן לסגור תיבת דו־שיח זו כעת ולהתקין תוספים מתפריט 'העדפות "
-"&lt; מנהל תוספים' ."
+"&gt; מנהל תוספים' ."
 
 #: ../gramps/gui/glade/updateaddons.glade:105
 msgid "_Select All"
-msgstr "_בחירת הכל"
+msgstr "_בחירה בהכול"
 
 #: ../gramps/gui/glade/updateaddons.glade:120
 msgid "Select _None"
@@ -17862,7 +17862,7 @@ msgstr "עצה יומית"
 
 #: ../gramps/gui/grampsgui.py:58 ../gramps/gui/undohistory.py:74
 msgid "Undo History"
-msgstr "היסטורית הסגות"
+msgstr "היסטוריית הסגות"
 
 #: ../gramps/gui/grampsgui.py:58
 msgid "_Abandon Changes and Quit"
@@ -18039,7 +18039,7 @@ msgid ""
 "typically located in /usr/share/doc/gramps.\n"
 msgstr ""
 "תרגומי GTK לשפה הנוכחית (%(language)s) חסרים.\n"
-"‏%(bold_start)s גרמפס%(bold_end)s ימשיך בכול זאת.\n"
+"‏%(bold_start)s גרמפס%(bold_end)s ימשיך בכל זאת.\n"
 "‏ממשק המשתמש יקרוס ככול הנראה כתוצאה מכך, במיוחד עבור שפות RTL!\n"
 "\n"
 "נא לעיין בתיעוד גרמפס README לקבלת דרישות קדם להתקנה,\n"
@@ -19009,9 +19009,9 @@ msgid ""
 "Note: your currently opened database is safe. It was only a copy of your "
 "data that failed to save."
 msgstr ""
-"אירעה שגיאה בעת שמירת הנתונים. ניתן לנסות לייצא שוב.\n"
+"אירעה שגיאה בעת שמירת הנתונים. ניתן לנסות לייצא מחדש.\n"
 "\n"
-"הערה: מסד־הנתונים שפתוח כעת בטוח. רק שמירת עותק לנתונים כשלה."
+"הערה: מסד־הנתונים שפתוח כעת בטוח. אך יצירת עותק לנתונים כשלה."
 
 #: ../gramps/gui/plug/export/_exportassistant.py:562
 msgid ""
@@ -19605,7 +19605,7 @@ msgid ""
 "If you think you may want to revert running this tool, please stop here and "
 "backup your database."
 msgstr ""
-"התקדמות עם כלי זה תמחק את כל היסטורית ההסגות בשיח זה. במיוחד, לא ניתן יהיה "
+"התקדמות עם כלי זה תמחק את כל היסטוריית ההסגות בשיח זה. במיוחד, לא ניתן יהיה "
 "להסיג עוד את השינויים שנעשו באמצעות כלי זה או כל שינוי שנעשה טרם השימוש בו.\n"
 "\n"
 "נא לגבות את מסד־הנתונים תחילה, למקרה שתידרש הסגת תוצאות ריצת כלי זה ."
@@ -19772,7 +19772,7 @@ msgstr "אישור מחיקה"
 
 #: ../gramps/gui/undohistory.py:197
 msgid "Are you sure you want to clear the Undo history?"
-msgstr "האם לסלקהיסטורית הסגות?"
+msgstr "האם לסלקהיסטוריית הסגות?"
 
 #: ../gramps/gui/undohistory.py:198 ../gramps/plugins/gramplet/eval.py:83
 msgid "Clear"
@@ -20191,11 +20191,11 @@ msgstr "שורות שנבחרו לפי תג"
 
 #: ../gramps/gui/views/tags.py:96
 msgid "New Tag..."
-msgstr "תג חדש..."
+msgstr "תג חדש…"
 
 #: ../gramps/gui/views/tags.py:96
 msgid "Organize Tags..."
-msgstr "ניהול תגים..."
+msgstr "ניהול תגים…"
 
 #: ../gramps/gui/views/tags.py:115
 msgctxt "manual"
@@ -20242,13 +20242,13 @@ msgstr "שינוי תעדוף תגים"
 #: ../gramps/gui/views/tags.py:565
 #, python-format
 msgid "Remove tag '%s'?"
-msgstr "הסרת תג '%s'?"
+msgstr "להסיר תג '%s'?"
 
 #: ../gramps/gui/views/tags.py:567
 msgid ""
 "The tag definition will be removed.  The tag will be also removed from all "
 "objects in the database."
-msgstr "הגדרת התג תוסר.   גם התג יוסר מכול הרשומות במסד הנתונים."
+msgstr "הגדרת התג תוסר.    התג יוסר מכל הרשומות במסד הנתונים גם כן."
 
 #: ../gramps/gui/views/tags.py:606
 #, python-format
@@ -21080,7 +21080,7 @@ msgstr ""
 "  גודל העמוד ישתנה לפי 'גובה' אילן־היוחסין\n"
 "\n"
 "עם אפשרות 'שינוי גודל אילן־היוחסין להתאמה לגודל העמוד' \n"
-" גודל העמוד ישתנה כך שכול פער ב'גובה' או ב'רוחב' העמוד יוסר"
+" גודל העמוד ישתנה כך שכל פער ב'גובה' או ב'רוחב' העמוד יוסר"
 
 #: ../gramps/plugins/drawreport/ancestortree.py:950
 #: ../gramps/plugins/drawreport/descendtree.py:1687
@@ -22442,7 +22442,7 @@ msgstr "vCalendar משמש בתכנות לוח־שנה ו־ PIM רבות."
 
 #: ../gramps/plugins/export/export.gpr.py:185
 msgid "vCalendar export options"
-msgstr "אפשרויות יצוא vCalendar"
+msgstr "אפשרויות ייצוא vCalendar"
 
 #: ../gramps/plugins/export/export.gpr.py:196
 #: ../gramps/plugins/importer/import.gpr.py:174
@@ -22865,7 +22865,7 @@ msgid ""
 "  5. %(gramps_FAQ_html_start)s%(faq_section)sIs it necessary to update "
 "Gramps every time an update is released?%(html_end)s\n"
 msgstr ""
-"  5. %(gramps_FAQ_html_start)s%(faq_section)sהאם הכרחי לעדכן את גרמפס בכול "
+"  5. %(gramps_FAQ_html_start)s%(faq_section)sהאם הכרחי לעדכן את גרמפס בכל "
 "גרסה שמשוחררת?%(html_end)s\n"
 
 #: ../gramps/plugins/gramplet/faqgramplet.py:124
@@ -24311,9 +24311,9 @@ msgstr ""
 "כעת ניתן להתחיל להזין את נתוני ה'משפחה הראשונה', זה נעשה על ידי הזנת נתוני "
 "ה'אדם' הראשון.\n"
 "\n"
-"ממצג 'אנשים', מהתפריט, לחיצה על 'הוספה', לאחר מכן 'אדם' (או שימוש בסמל ה־[+])"
-" תפתח את חלון הזנת פרטי 'אדם'. הזנת המידע הבסיסי ושמירת הרשומה תייצר את "
-"נקודת המוצא לאילן־היוחסין. להרחבת הנתונים יש לבחור ברשומת 'אדם' זה ומעבר "
+"ממצג 'אנשים', מהתפריט, לחיצה על 'הוספה', לאחר מכן 'אדם' (או שימוש בסמל "
+"ה־[+]) תפתח את חלון הזנת פרטי 'אדם'. הזנת המידע הבסיסי ושמירת הרשומה תייצר "
+"את נקודת המוצא לאילן־היוחסין. להרחבת הנתונים יש לבחור ברשומת 'אדם' זה ומעבר "
 "למצג קשרי־קרבה.\n"
 "\n"
 "עם הקמת רשומת אדם ראשונה זו, כל אפשרויות התפריט ותפקודי הסמלים יהפכו "
@@ -24419,12 +24419,12 @@ msgid ""
 "program.\n"
 "\n"
 msgstr ""
-"כיצד ניתן לראות את גרמפס בפעולה? על ידי יצירת אילן־יוחסין וייבאו מסד־נתוני "
+"כיצד ניתן לראות את גרמפס בפעולה? על ידי יצירת אילן־יוחסין וייבוא מסד־נתוני "
 "ההדגמה.\n"
 "\n"
-"יצירת אילן־יוחסין חדש כמתואר לעיל. מומלץ לקרוא לו בשם \"דוגמה\".\n"
+"נא ליצור אילן־יוחסין חדש כמתואר לעיל. מומלץ לכנות אותו בשם \"דוגמה\".\n"
 "\n"
-"ייבוא קובץ גרמפס להדגמה example.gramps.\n"
+"יש לייבר את קובץ גרמפס example.gramps.\n"
 "\n"
 "כעת נותר רק לעקוב אחר ההוראות למיקום אחסון הקובץ, באמצעות תוכנת גרמפס.\n"
 "\n"
@@ -24447,7 +24447,7 @@ msgstr "משך ההשהיה לפני עיבוד צאצאי אב קדמון"
 
 #: ../gramps/plugins/gramplet/whatsnext.py:76
 msgid "Tag to indicate that a person is complete"
-msgstr "תג שמצביע על השלמת מחקר לאדם מסויים"
+msgstr "תג שמצביע על השלמת מחקר לאדם מסוים"
 
 #: ../gramps/plugins/gramplet/whatsnext.py:83
 msgid "Tag to indicate that a family is complete"
@@ -25073,7 +25073,7 @@ msgid ""
 "generated that contain active links to the files generated by the 'Narrated "
 "Web Site' report."
 msgstr ""
-"לכלול מען URL בכול צומת בתרשים כך שיכילו קישורים פעילים לקבצים שנוצרו על־ידי "
+"לכלול מען URL בכל צומת בתרשים כך שיכילו קישורים פעילים לקבצים שנוצרו על־ידי "
 "דוח 'אתר מרשתת מילולי'."
 
 #: ../gramps/plugins/graph/gvrelgraph.py:995
@@ -25162,8 +25162,8 @@ msgid ""
 msgstr ""
 "בהגדרה ה'תקנית', הורים יאותרו כזוגות כדי לשמור את מרבית הקווים קצרים.\n"
 "ההגדרה 'הורים יחד' תסייע למקם בני־זוג בסמיכות, אבל התרשימים לא יהיו ברורים "
-"מאליהם, התוצאה תתקבל עם קווים ארוכים יותר ותרשימום גדולים יותר.\n"
-"הגדרת 'הזחת הורים', תנסה למקם בני זוג בסמיכות, אך הם יוזחו זו מזה. הגדרה זו "
+"מאליהם, התוצאה תתקבל עם קווים ארוכים יותר ותרשימים גדולים יותר.\n"
+"הגדרת 'הזחת הורים', תנסה למקם בני זוג בסמיכות, אך הם יוזחו זה מזה. הגדרה זו "
 "נוטה להפוך תרשימים בעלי מספר רב של פרטים בדור, ל'מרובעים' יותר."
 
 #: ../gramps/plugins/importer/import.gpr.py:38
@@ -25204,7 +25204,7 @@ msgstr "מסד נתונים גרמפס 2‎.x"
 
 #: ../gramps/plugins/importer/import.gpr.py:139
 msgid "Import data from Gramps 2.x database files"
-msgstr "יבוא נתונים מקובץ מסד־נתונים גרמפס 2‎.x"
+msgstr "ייבוא נתונים מקובץ מסד־נתונים גרמפס 2‎.x"
 
 #: ../gramps/plugins/importer/import.gpr.py:156
 msgid "Pro-Gen"
@@ -25766,10 +25766,10 @@ msgid ""
 "into that version. Please refer to:%(gramps_wiki_migrate_two_to_three_url)s"
 msgstr ""
 "גרסת מסד־נתונים זו, לא תומכת בתוכנת גרמפס בגרסה הנוכחית. נא לאתחל עם גרסה "
-"ישנה יותר של גרמפס מסדרת ‎,3.0.x ולייבא את מסד־הנתונים לגרסה זו. בשלב הבא, "
-"יש לייצא עותק של מסד־הנתונים לקובץ XML (אילן־יוחסין). לאחר מכן, לשדרג את "
-"תוכנת גרמפס לגרסה העדכנית ביותר (לדוגמה גרסה זו), לייצר אילן־יוחסין ריק, "
-"ולייבא אליו את קובץ ה־XML שנוצר קודם. למידע נוסף: "
+"ישנה יותר של גרמפס מסדרת ‎,3.0.x ולייבא את מסד־הנתונים לגרסה זו. בשלב הבא, יש "
+"לייצא עותק של מסד־הנתונים לקובץ XML (אילן־יוחסין). לאחר מכן, לשדרג את תוכנת "
+"גרמפס לגרסה העדכנית ביותר (לדוגמה גרסה זו), לייצר אילן־יוחסין ריק, ולייבא "
+"אליו את קובץ ה־XML שנוצר קודם. למידע נוסף: "
 "%(gramps_wiki_migrate_two_to_three_url)s"
 
 #: ../gramps/plugins/importer/importprogen.glade:49
@@ -25795,7 +25795,7 @@ msgid ""
 "(Text, import Filename & (System-)Date)."
 msgstr ""
 "תכונות מלל מקור\n"
-"(מלל, יבוא שם קובץ ותאריך (מערכת))."
+"(מלל, ייבוא שם קובץ ותאריך (מערכת))."
 
 #: ../gramps/plugins/importer/importprogen.glade:190
 #: ../gramps/plugins/importer/importprogen.glade:207
@@ -25824,7 +25824,7 @@ msgid ""
 "(Text, import Filename & (System-)Date)."
 msgstr ""
 "מלל תכונות מובאה\n"
-"(מלל, יבוא שם קובץ ותאריך (מערכת))."
+"(מלל, ייבוא שם קובץ ותאריך (מערכת))."
 
 #: ../gramps/plugins/importer/importprogen.glade:362
 msgid "Import Text"
@@ -26061,12 +26061,12 @@ msgstr "ייבוא מקובץ vCard"
 
 #: ../gramps/plugins/importer/importvcard.py:274
 msgid "vCard import report: No errors detected"
-msgstr "דוח יבוא vCard: לא זוהו שגיאות"
+msgstr "דוח ייבוא vCard: לא זוהו שגיאות"
 
 #: ../gramps/plugins/importer/importvcard.py:277
 #, python-format
 msgid "vCard import report: %s errors detected\n"
-msgstr "דוח יבוא vCard: זוהו %s שגיאות\n"
+msgstr "דוח ייבוא vCard: זוהו %s שגיאות\n"
 
 #: ../gramps/plugins/importer/importvcard.py:342
 #, python-format
@@ -26186,11 +26186,11 @@ msgid ""
 msgstr ""
 "\n"
 "הקובץ שיובא לא היה שלם.\n"
-"לפעולת תיקן, נוצרו %(new)d עצמים\n"
+"לפעולת תיקון, נוצרו %(new)d עצמים\n"
 "שסיווג התכונה שלהם נקבע כ'לא ידוע'.\n"
 "התפלגות לסוגי־אב מתוארת על־ידי\n"
-"המספר בסוגריים. \n"
-"עצמים 'לא ידועים' אלו מפנים להערה %(unknown)s ככל שמתאפשר."
+"המספר בסוגריים. עצמים 'לא ידועים' אלו\n"
+"מפנים להערה %(unknown)s ככל שמתאפשר."
 
 #: ../gramps/plugins/importer/importxml.py:387
 msgid ""
@@ -26309,14 +26309,14 @@ msgid ""
 "  %(gramps_wiki_xml_url)s\n"
 "for more info."
 msgstr ""
-"קובץ .gramps ליבוא, נוצר בגרסת גרמפס %(oldgramps)s, בעוד שגרסה עדכנית "
-"יותר%(newgramps)s, מותקנת כעת.\n"
+"קובץ ה־‎.gramps המיועד לייבוא נוצר בגרסה %(oldgramps)s של גרמפס, בעוד שהגרסה "
+"שלך עדכנית יותר %(newgramps)s.\n"
 "\n"
-"לאחר היבוא, נא לוודא שכול הנתונים יובאו כראוי. במידה ונתגלו בעיות, נא לדוח "
-"על תקל ולהשתמש בינתיים בגרסת גרמפס ישנה יותר לייבוא הקובץ בגרסת  XML  "
-"%(xmlversion)s.\n"
-"נא לעיין ב־\n"
-"%(gramps_wiki_xml_url)s\n"
+"נא לוודא שלאחר הייבוא הכול יובא כראוי. אם צצות תקלות, נא לדווח על תקל "
+"ולהשתמש בגרסה ישנה יותר של גרמפס לבינתיים כדי לייבא את הקובץ הזה שהוא בתסדיר "
+"xml בגרסה %(xmlversion)s.\n"
+"ניתן לעיין בכתובת\n"
+"  %(gramps_wiki_xml_url)s\n"
 "למידע נוסף."
 
 #: ../gramps/plugins/importer/importxml.py:1196
@@ -26488,12 +26488,12 @@ msgstr "ייבוא מקובץ GEDCOM"
 
 #: ../gramps/plugins/lib/libgedcom.py:3132
 msgid "GEDCOM import report: No errors detected"
-msgstr "דוח יבוא ג'דקום: לא זוהו שגיאות"
+msgstr "דוח ייבוא ג'דקום: לא זוהו שגיאות"
 
 #: ../gramps/plugins/lib/libgedcom.py:3135
 #, python-format
 msgid "GEDCOM import report: %s errors detected"
-msgstr "דוח יבוא ג'דקום: זוהו %s שגיאות"
+msgstr "דוח ייבוא ג'דקום: זוהו %s שגיאות"
 
 #: ../gramps/plugins/lib/libgedcom.py:3461
 #: ../gramps/plugins/lib/libgedcom.py:3485
@@ -26503,7 +26503,7 @@ msgstr "השורה אינה מובנת"
 
 #: ../gramps/plugins/lib/libgedcom.py:3487
 msgid "Tag recognized but not supported"
-msgstr "תג זוהה אך לא ניתמך"
+msgstr "תג זוהה אך לא נתמך"
 
 #: ../gramps/plugins/lib/libgedcom.py:3523
 msgid "Skipped subordinate line"
@@ -30406,7 +30406,7 @@ msgstr "מיזוג המקומות שנבחרו"
 
 #: ../gramps/plugins/lib/libplaceview.py:256
 msgid "No map service is available."
-msgstr "אין שירות מפות זמין."
+msgstr "אין שרות מפות זמין."
 
 #: ../gramps/plugins/lib/libplaceview.py:257
 msgid "Check your installation."
@@ -30430,19 +30430,18 @@ msgstr "עורך מסנני מקום"
 
 #: ../gramps/plugins/lib/libplaceview.py:447
 msgid "_Look up with Map Service"
-msgstr "_איתור באמצעות שירות מפות"
+msgstr "_איתור באמצעות שרות מפות"
 
 #: ../gramps/plugins/lib/libplaceview.py:500
 msgid ""
 "Attempt to see selected locations with a Map Service (OpenstreetMap, Google "
 "Maps, ...)"
 msgstr ""
-"ניסיון להצגת מיקומים שנבחרו באמצעות שירות מפות (OpenstreetMap, מפות "
-"גוגל, ...)"
+"ניסיון להצגת מיקומים שנבחרו באמצעות שרות מפות (OpenstreetMap, מפות גוגל, ...)"
 
 #: ../gramps/plugins/lib/libplaceview.py:500
 msgid "Select a Map Service"
-msgstr "נא לבחור שירות מפות"
+msgstr "נא לבחור שרות מפות"
 
 #: ../gramps/plugins/lib/libplaceview.py:542
 msgid "Cannot delete place."
@@ -30470,7 +30469,7 @@ msgstr ""
 
 #: ../gramps/plugins/lib/libplaceview.py:580
 msgid "Merging these places would create a cycle in the place hierarchy."
-msgstr "מיזוג מקומות אלו ייצר הפניה מעגלית במדרג המקומות."
+msgstr "מיזוג מקומות אלו ייצור הפניה מעגלית במדרג המקומות."
 
 #: ../gramps/plugins/lib/libplugins.gpr.py:37
 msgid "Provides a library for using Cairo to generate documents."
@@ -35222,8 +35221,8 @@ msgid ""
 "Searches the entire database, looking for citations that have the same "
 "Volume/Page, Date and Confidence."
 msgstr ""
-"חיפוש בכול רשומות מסד־הנתונים לאיתור מובאות עם ערך כרך/עמוד, תאריך ורמת "
-"ודאות זהים."
+"חיפוש בכל רשומות מסד־הנתונים לאיתור מובאות עם ערך כרך/עמוד, תאריך ורמת ודאות "
+"זהים."
 
 #: ../gramps/plugins/tool/tools.gpr.py:499
 msgid "Searches the entire database, looking for a possible loop."
