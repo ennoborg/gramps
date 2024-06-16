@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: Gramps 5.1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-24 22:29+0000\n"
-"PO-Revision-Date: 2024-04-28 11:07+0000\n"
+"PO-Revision-Date: 2024-05-06 11:07+0000\n"
 "Last-Translator: Avi Markovitz <avi.markovitz@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gramps-project/"
 "gramps/he/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 5.5.1\n"
+"X-Generator: Weblate 5.5.3\n"
 "X-Poedit-Bookmarks: 1508,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 
 #: ../data/holidays.xml:3
@@ -391,7 +391,7 @@ msgid ""
 msgstr ""
 "<b>עריכת עצמים<br/></b>ברוב המקרים הקשה כפולה על: שם, מקור, מקום או רשומת "
 "מדיה, תקפיץ חלון לעריכת העצם. לתשומת לב, התוצאה עשויה להיות תלויה בהקשר. "
-"לדוגמה, במצג משפחה, הקשה על הורה או צאצא, תקרא לעורך קשרי־המשפחה."
+"לדוגמה, במצג משפחה, הקשה על הורה או צאצא, תקרא לעורך קשרי־הקרבה."
 
 #: ../data/tips.xml:8
 msgid ""
@@ -580,8 +580,8 @@ msgid ""
 msgstr ""
 "<b>הקמת אילן־יוחסין חדש<br/></b> דרך טובה להקמת אילן־יוחסין חדש היא על־ידי "
 "הזנת כל בני המשפחה למאגר הנתונים ‏(מתפריט 'עריכה > הוספה...' או הקשה על "
-"'הוספת אדם חדש' ממצג אנשים). לאחר מכן, מעבר למצג קשרי־המשפחה ליצירת קשרים "
-"בין אנשים."
+"'הוספת אדם חדש' ממצג אנשים). לאחר מכן, מעבר למצג קשרי־הקרבה ליצירת קשרים בין "
+"אנשים."
 
 #: ../data/tips.xml:38
 msgid ""
@@ -692,7 +692,7 @@ msgid ""
 "Family Editor. Relationships can be any of Adopted, Birth, Foster, None, "
 "Sponsored, Stepchild and Unknown."
 msgstr ""
-"<b>עריכת קשרי־המשפחה הורה־צאצא<br/></b>ניתן לערוך קשרי צאצא להוריו על־ידי "
+"<b>עריכת קשרי־הקרבה הורה־צאצא<br/></b>ניתן לערוך קשרי צאצא להוריו על־ידי "
 "הקשה כפולה על הצאצא בעורך המשפחה. מערכות יחסים יכולות להיות מהסוגים: אימוץ, "
 "לידה, אומנה, ללא, נתמך, צאצא חורג ולא ידוע."
 
@@ -9150,7 +9150,7 @@ msgid ""
 "Spouses cannot be merged. To merge these people, you must first break the "
 "relationship between them."
 msgstr ""
-"לא ניתן למזג זוגאים. על מנת לאפשר למזג אותם מדרש לבטל תחילה את קשרי־המשפחה "
+"לא ניתן למזג זוגאים. על מנת לאפשר למזג אותם מדרש לבטל תחילה את קשרי־הקרבה "
 "ביניהם."
 
 #: ../gramps/gen/merge/mergepersonquery.py:136
@@ -9759,7 +9759,7 @@ msgstr "אוטומטי"
 
 #: ../gramps/gen/plug/docgen/treedoc.py:79
 msgid "Call Name Only"
-msgstr "שם פניה בלבד"
+msgstr "שם פנייה בלבד"
 
 #: ../gramps/gen/plug/docgen/treedoc.py:80
 msgid "Whole Given Name"
@@ -12079,7 +12079,7 @@ msgstr "ניחוש שם משפחה"
 
 #: ../gramps/gui/configure.py:1692
 msgid "Default family relationship"
-msgstr "קשר־משפחתי ברירת מחדל"
+msgstr "קשר־קרבה ברירת מחדל"
 
 #: ../gramps/gui/configure.py:1699
 msgid "Hide LDS tab in person and family editors"
@@ -15655,7 +15655,7 @@ msgstr ""
 "‏  <b>%t</b> - תואר            <b>%T</b> - תואר\n"
 "‏  <b>%p</b> - קידומת           <b>%P</b> - קידומת\n"
 " ‏ <b>%s</b> - סיומת           <b>%S</b> - סיומת\n"
-"‏  <b>%c</b> - שם פניה        <b>%C</b> - שם פניה\n"
+"‏  <b>%c</b> - שם פנייה        <b>%C</b> - שם פניה\n"
 "‏  <b>%y</b> - נגזר משם האב       <b>%Y</b> - נגזר משם האב</tt>"
 
 #: ../gramps/gui/glade/configure.glade:155
@@ -16967,7 +16967,7 @@ msgstr "מזהה יחיד למאגר מידע."
 #: ../gramps/gui/glade/editreporef.glade:425
 #: ../gramps/gui/glade/editrepository.glade:144
 msgid "Type of repository, eg., 'Library', 'Album', ..."
-msgstr "סוג מאגר, לדוגמה, 'ספריה', 'אלבום', ..."
+msgstr "סוג מאגר, לדוגמה, 'ספרייה', 'אלבום', ..."
 
 #: ../gramps/gui/glade/editsource.glade:112
 msgid "_Author:"
@@ -17015,7 +17015,7 @@ msgstr "_תאור:"
 
 #: ../gramps/gui/glade/editurl.glade:170
 msgid "Type of internet address, eg. E-mail, Web Page, ..."
-msgstr "סוג כתובת מרשתת, לדוגמה, דוא\"ל, עמוד מרשתת, ..."
+msgstr "סוג כתובת מרשתת, לדוגמה, דואר אלקטרוני, עמוד מרשתת, ..."
 
 #: ../gramps/gui/glade/editurl.glade:189
 msgid ""
@@ -25084,7 +25084,7 @@ msgstr "לכלול קשרי־קרבה לאדם המרכזי"
 
 #: ../gramps/plugins/graph/gvrelgraph.py:998
 msgid "Whether to show every person's relationship to the center person"
-msgstr "האם להציג את קשרי־המשפחה של כל האנשים לאדם המרכזי"
+msgstr "האם להציג את קשרי־הקרבה של כל האנשים לאדם המרכזי"
 
 #: ../gramps/plugins/graph/gvrelgraph.py:1006
 msgid "Whether to include thumbnails of people."
@@ -30473,7 +30473,7 @@ msgstr "מיזוג מקומות אלו ייצור הפניה מעגלית במד
 
 #: ../gramps/plugins/lib/libplugins.gpr.py:37
 msgid "Provides a library for using Cairo to generate documents."
-msgstr "ספריה שתשמש את קיירו לחילול מסמכים."
+msgstr "ספרייה שתשמש את קיירו לחילול מסמכים."
 
 #: ../gramps/plugins/lib/libplugins.gpr.py:56
 msgid "Provides GEDCOM processing functionality"
@@ -30824,7 +30824,7 @@ msgstr "נא לבחור קובץ kml המשמש להוספת מקומות"
 
 #: ../gramps/plugins/lib/maps/geography.py:1146
 msgid "You will need to edit each place manually to add place type, ...\n"
-msgstr "הוספת סוג מקום,כרוכה בעריכה ידנית של כל מקום ומקום, ...\n"
+msgstr "תידרש עריכת כל מקום באופן ידני על מנת להוסיף סוג מקום, …\n"
 
 #: ../gramps/plugins/lib/maps/geography.py:1150
 #, python-brace-format
@@ -31602,7 +31602,7 @@ msgstr "קרבה לאדם הבית"
 
 #: ../gramps/plugins/quickview/quickview.gpr.py:117
 msgid "Display all relationships between person and home person."
-msgstr "הצגת כל קשרי־המשפחה בין אדם ו'אדם הבית'."
+msgstr "הצגת כל קשרי־הקרבה בין אדם ו'אדם הבית'."
 
 #: ../gramps/plugins/quickview/quickview.gpr.py:138
 msgid "Display filtered data"
@@ -31851,7 +31851,7 @@ msgstr "מחשבון קשרי־קרבה הולנדי"
 
 #: ../gramps/plugins/rel/relplugins.gpr.py:362
 msgid "Norwegian Relationship Calculator"
-msgstr "מחשבון קשרי־קרבה נורבגי"
+msgstr "מחשבון קשרי־קרבה נורווגי"
 
 #: ../gramps/plugins/rel/relplugins.gpr.py:396
 msgid "Polish Relationship Calculator"
@@ -31986,7 +31986,7 @@ msgstr "✝"
 #: ../gramps/plugins/textreport/birthdayreport.py:249
 #, python-format
 msgid "Relationships shown are to %s"
-msgstr "קשרי־המשפחה המוצגים הם ל־%s"
+msgstr "קשרי־הקרבה המוצגים הם ל־%s"
 
 #: ../gramps/plugins/textreport/birthdayreport.py:372
 #, python-format
@@ -32332,7 +32332,7 @@ msgstr "בני זוג: %s"
 #: ../gramps/plugins/textreport/detdescendantreport.py:649
 #, python-format
 msgid "Relationship with: %s"
-msgstr "קשרי־קרבה עם: %s"
+msgstr "קשרי־קרבה אל: %s"
 
 #: ../gramps/plugins/textreport/detancestralreport.py:860
 msgid "Sosa-Stradonitz number"
@@ -32395,12 +32395,12 @@ msgstr "האם להשמיט אָבוֹת קַדמוֹנִים כפולים."
 #: ../gramps/plugins/textreport/detancestralreport.py:913
 #: ../gramps/plugins/textreport/detdescendantreport.py:1121
 msgid "Use callname for common name"
-msgstr "שימוש בשם פניה לשמות נפוצים"
+msgstr "שימוש בשם פנייה לשמות נפוצים"
 
 #: ../gramps/plugins/textreport/detancestralreport.py:914
 #: ../gramps/plugins/textreport/detdescendantreport.py:1122
 msgid "Whether to use the call name as the first name."
-msgstr "האם להשתמש בשם פניה כשם פרטי."
+msgstr "האם להשתמש בשם פנייה כשם פרטי."
 
 #: ../gramps/plugins/textreport/detancestralreport.py:922
 #: ../gramps/plugins/textreport/detdescendantreport.py:1130
@@ -33100,11 +33100,11 @@ msgstr "לא להשתמש בשם פניה"
 
 #: ../gramps/plugins/textreport/recordsreport.py:253
 msgid "Replace first names with call name"
-msgstr "החלפת שם פרטי בשם פניה"
+msgstr "החלפת שם פרטי בשם פנייה"
 
 #: ../gramps/plugins/textreport/recordsreport.py:257
 msgid "Underline call name in first names / add call name to first name"
-msgstr "סימון שם פניה שהוא חלק משם פרטי בקו תחתון / הוספת שם פניה לשם פרטי"
+msgstr "סימון שם פנייה שהוא חלק משם פרטי בקו תחתון / הוספת שם פנייה לשם פרטי"
 
 #: ../gramps/plugins/textreport/recordsreport.py:265
 msgid "Footer text"
@@ -33548,8 +33548,8 @@ msgstr "אף רשומת אירוע לא סוגלה."
 #, python-brace-format
 msgid "{number_of} event record was modified."
 msgid_plural "{number_of} event records were modified."
-msgstr[0] "רשומת אירוע {number_of} הוסגלה."
-msgstr[1] "{number_of} רשומות אירוע הסגלו."
+msgstr[0] "רשומת אירוע {number_of} נערכה."
+msgstr[1] "{number_of} רשומות אירוע נערכו."
 
 #: ../gramps/plugins/tool/check.py:134 ../gramps/plugins/tool/check.py:313
 msgid "Checking Database"
@@ -33589,7 +33589,7 @@ msgid ""
 "Objects referenced by this note were referenced but missing so that is why "
 "they have been created when you ran Check and Repair on %s."
 msgstr ""
-"חסרים עצמים אליהם מפנה הערה זו , לכן הם נוצרו שוב בעקבות הפעת בדיקה ותיקון "
+"חסרים עצמים אליהם מפנה הערה זו, לכן הם נוצרו שוב בעקבות הפעלת בדיקה ותיקון "
 "ב־%s."
 
 #: ../gramps/plugins/tool/check.py:344
@@ -33813,7 +33813,7 @@ msgstr[1] "{quantity} משפחות ללא הורים או צאצאים, הוסר
 #, python-brace-format
 msgid "{quantity} corrupted family relationship fixed\n"
 msgid_plural "{quantity} corrupted family relationships fixed\n"
-msgstr[0] "קשר־משפחתי פגום {quantity} תוקן\n"
+msgstr[0] "קשר־קרבה פגום {quantity} תוקן\n"
 msgstr[1] "{quantity} קשרי־קרבה פגומים תוקנו\n"
 
 #: ../gramps/plugins/tool/check.py:2819
@@ -33925,15 +33925,15 @@ msgstr[1] "{quantity} מקורות מקושרים אך לא נמצאו\n"
 #, python-brace-format
 msgid "{quantity} note object was referenced but not found\n"
 msgid_plural "{quantity} note objects were referenced, but not found\n"
-msgstr[0] "{quantity} עצם הערה עם הפניות, לא נמצא\n"
-msgstr[1] "{quantity} עצמי הערה עם הופנוית, לא נמצאו\n"
+msgstr[0] "בוצעה הפניה לעצם הערה {quantity}, אך הוא לא נמצא\n"
+msgstr[1] "בוצעה הפניה ל־{quantity} עצמי הערה, אך הם לא נמצאו\n"
 
 #: ../gramps/plugins/tool/check.py:2989 ../gramps/plugins/tool/check.py:2999
 #, python-brace-format
 msgid "{quantity} tag object was referenced but not found\n"
 msgid_plural "{quantity} tag objects were referenced, but not found\n"
-msgstr[0] "הפניה לעצם תג {quantity} אך לא נמצא\n"
-msgstr[1] "הפניה ל־{quantity} עצמי תג אך לא נמצאו\n"
+msgstr[0] "בוצעה הפניה לעצם תג {quantity} אך לא נמצא\n"
+msgstr[1] "בוצעה הפניה ל־{quantity} עצמי תג אך לא נמצאו\n"
 
 #: ../gramps/plugins/tool/check.py:3009
 #, python-brace-format
@@ -34294,9 +34294,9 @@ msgstr ""
 "הנתיב שלו, התיאור שלו, המזהה שלו, ההערות, ההפניות למקור וכדומה. נתונים "
 "אלה%(bold_start)sלא כוללים את קובץ המדיה עצמו%(bold_end)s.\n"
 "\n"
-"קבצים שמכילים תמונה, קול, סרט וכדומה, מאוחסנים למעשה בנפרד, בכונן הקשיח. "
-"קבצים אלה אינם מנוהלים על־ידי גרמפס ואינם משובצים במסד הנתונים של גרמפס. "
-"מסד־הנתונים של גרמפס מאחסן רק את שמות הקבצים והנתיב אליהם.\n"
+"קבצים שמכילים תמונה, קול, סרט וכדומה, מאוחסנים למעשה בנפרד בכונן הקשיח. "
+"קבצים אלה אינם מנוהלים על־ידי גרמפס ואינם משובצים במסד־הנתונים של גרמפס. מסד־"
+"הנתונים מאחסן רק את שמות הקבצים והנתיב אליהם.\n"
 "\n"
 "הכלי מאפשר לשנות רשומות בתוך מסד־נתוני גרמפס בלבד. כך שאם נדרש להעביר או "
 "לשנות את שמות הקבצים עצמם, יש לעשות באופן עצמאי, מחוץ לגרמפס. לאחר מכן ניתן "
@@ -34508,15 +34508,14 @@ msgstr "כל האנשים במסד הנתונים קשורים ל־%s"
 msgid "Setting tag for {number_of} person"
 msgid_plural "Setting tag for {number_of} people"
 msgstr[0] "הגדרת תג לאדם {number_of}"
-msgstr[1] "הגדרת תג ל {number_of} אנשים"
+msgstr[1] "הגדרת תג ל־{number_of} אנשים"
 
 #: ../gramps/plugins/tool/notrelated.py:303
 #, python-brace-format
 msgid "Finding relationships between {number_of} person"
 msgid_plural "Finding relationships between {number_of} people"
-msgstr[0] ""
-"מציאת קשרי־קרבה בין אדם {number_of}מציאת קשרי־קרבה בין {number_of} אנשים"
-msgstr[1] ""
+msgstr[0] "מציאת קשרי־קרבה בין אדם {number_of}"
+msgstr[1] "מציאת קשרי־קרבה בין {number_of} אנשים"
 
 #: ../gramps/plugins/tool/notrelated.py:394
 #, python-brace-format
@@ -34602,13 +34601,13 @@ msgid ""
 msgstr ""
 "להלן רשימת כינויים, כותרות, קידומות ושמות משפחה מורכבים שגרמפס יכול לחלץ "
 "מאילן־היוחסין.\n"
-"אם קבלת השינויים, גרמפס תשנה את הערכים שנבחרו.\n"
+"עם קבלת השינויים, גרמפס תשנה את הערכים שנבחרו.\n"
 "\n"
 "שמות משפחה מורכבים מוצגים כרשימות של [קידומת, שם משפחה, מחבר].\n"
 "לדוגמה, עם ברירות המחדל, השם 'דה מאסקרנאס דא סילבה אי לאנקסטר' יוצג כ:\n"
 "       [דה, מאסקרנאס]-[דא, סילבה, אי]-[,לנקסטרה]\n"
 "\n"
-"נא להריץ את הכלי מספר פעמים כדי לתקן שמות בעלי מידע מרובה שניתן לחילוץ."
+"נא להריץ את הכלי מספר פעמים כדי לתקן שמות בעלי מידע מרובה שניתן לחלץ."
 
 #: ../gramps/plugins/tool/patchnames.py:64
 msgctxt "manual"
@@ -35121,7 +35120,7 @@ msgid ""
 "that can be applied to the database to find similar events"
 msgstr ""
 "סיוע בניתוח נתונים על־ידי מתן אפשרות לפיתוח מסננים מותאמים אישית אותם ניתן "
-"להחיל על מסד־הנתונים לצורך אתור אירועים דומים"
+"להחיל על מסד־הנתונים לצורך איתור אירועים דומים"
 
 #: ../gramps/plugins/tool/tools.gpr.py:144
 msgid "Extracts event descriptions from the event data"
@@ -36045,9 +36044,9 @@ msgid ""
 "with coordinates. You can use the history to navigate on the map. You can "
 "use filtering."
 msgstr ""
-"הקשת עכבר ימנית על נקודה במפה ובחירת 'הצגת כל האירועים' כדי להציג את כל "
-"האירועים הידועים עבור נקודות־ציון. ניתן להשתמש בהיסטוריה לנווט במפה. ניתן "
-"להשתמש בסינון."
+"הקשת עכבר ימנית על נקודה במפה ובחירת 'הצגת כל האירועים' תציג את כל האירועים "
+"הידועים עבור נקודות־ציון. ניתן להשתמש בהיסטוריה לניווט במפה. וגם להשתמש "
+"בסינון."
 
 #: ../gramps/plugins/view/geoevents.py:427
 #: ../gramps/plugins/view/geoevents.py:459
@@ -36867,7 +36866,7 @@ msgstr "מצג כל ההערות"
 
 #: ../gramps/plugins/view/view.gpr.py:120
 msgid "The view showing all relationships of the selected person"
-msgstr "מצג כל הקשרים־משפחתיים של האדם שנבחר"
+msgstr "מצג כל קשרי־הקרבה של האדם שנבחר"
 
 #: ../gramps/plugins/view/view.gpr.py:136
 msgid "The view showing an ancestor pedigree of the selected person"
@@ -37202,8 +37201,7 @@ msgid ""
 msgstr ""
 "עמוד זה נועד למשתמש או יוצר אתר אילן־יוחסין / אתר מילולי זה, שנועד לשתף מספר "
 "קבצים שקשורים עם בני המשפחה.  ניתן להקיש על הקבצים שמפורטים להלן כדי להורידם "
-"למחשב. על עמוד ההורדות והקבצים חלים אותם זכויות יוצרים כמו על שאר עמדי אתר "
-"המרשתת."
+"למחשב. על עמוד ההורדות והקבצים חלים אותם זכויות יוצרים כמו על שאר עמודי האתר."
 
 #: ../gramps/plugins/webreport/download.py:128
 msgid "File Name"
@@ -37237,7 +37235,7 @@ msgid ""
 "ID will open a page for that event."
 msgstr ""
 "העמוד מכיל מפתח של כל האירועים במסד הנתונים, ממוינים לפי סוג ותאריך (ככל "
-"שאחד מאלו קיים). הקשה על מזהה אירוע גרמפס&8217;   תיפתח עמוד עבור אירוע זה."
+"שאחד מאלו קיים). הקשה על מזהה אירוע גרמפס&8217; יפתח עמוד עבור אירוע זה."
 
 #: ../gramps/plugins/webreport/event.py:312
 #: ../gramps/plugins/webreport/family.py:314
@@ -37261,7 +37259,7 @@ msgid ""
 "database, sorted by their family name/ surname. Clicking on a person&#8217;s "
 "name will take you to their family/ relationship&#8217;s page."
 msgstr ""
-"עמוד זה מכיל מפתח של כל המשפחות/קשרי־המשפחה במסד הנתונים, ממוינים לפי שם "
+"עמוד זה מכיל מפתח של כל המשפחות/קשרי־הקרבה במסד הנתונים, ממוינים לפי שם "
 "משפחה. הקשה על שם של אדם תוביל לעמוד המשפחה/קשר־משפחתי."
 
 #: ../gramps/plugins/webreport/family.py:558
@@ -37439,7 +37437,7 @@ msgstr "נא לבחור מסנן על מנת להגביל את האנשים שי
 
 #: ../gramps/plugins/webreport/narrativeweb.py:2101
 msgid "Show the relationship between the current person and the active person"
-msgstr "הצגת קשרי־המשפחה בין האדם הנוכחי והאדם הפעיל"
+msgstr "הצגת קשרי־הקרבה בין האדם הנוכחי והאדם הפעיל"
 
 #: ../gramps/plugins/webreport/narrativeweb.py:2108
 msgid ""
@@ -37942,8 +37940,8 @@ msgid ""
 "Whether or not to add Address Book pages,which can include e-mail and "
 "website addresses and personal address/ residence events."
 msgstr ""
-"האם לכלול עמוד ספר כתובות, הכולל דואר אלקטרוני, כתובת אתר מרשתת "
-"וכתבות/אירועי מגורים אישיים."
+"האם לכלול עמוד ספר כתובות, הכולל דואר אלקטרוני, כתובת אתר מרשתת וכתבות/"
+"אירועי מגורים אישיים."
 
 #: ../gramps/plugins/webreport/narrativeweb.py:2585
 msgid "Include the statistics page"
