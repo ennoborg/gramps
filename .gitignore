@@ -30,3 +30,5 @@ ehthumbs.db
 *~
 
 *.lock
+
+*.ffs_db
