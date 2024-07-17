@@ -99,7 +99,7 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
             return
 
         self.progress = ProgressMeter(
-            _('Checking Person UIDs'), '', parent=uistate.window)
+            _('Checking person UIDs'), '', parent=uistate.window)
         self.progress.set_pass(_('Searching for persons without valid UIDs'),
                                len(self.db.get_person_handles(False)))
         self.name_list = []
@@ -114,10 +114,10 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
             for attr in attr_list:
 
                 key = attr.get_type().xml_str()
-                value = attr.get_value().strip().replace('\r', ' ')
 
                 if key == "_UID":
                     uid = True
+                    value = attr.get_value().strip().replace('\r', ' ').strip('{ }').replace('-', '').upper()
                     checksum = value[32:36]
                     new_checksum = calculate_checksum(value)
                     if checksum != new_checksum:
@@ -199,10 +199,10 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
                 for attr in attr_list:
 
                     key = attr.get_type().xml_str()
-                    value = attr.get_value().strip().replace('\r', ' ')
 
                     if key == "_UID":
                         uid = True
+                        value = attr.get_value().strip().replace('\r', ' ').strip('{ }').replace('-', '').upper()
                         checksum = value[32:36]
                         new_checksum = calculate_checksum(value)
                         if checksum != new_checksum:
