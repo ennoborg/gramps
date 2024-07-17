@@ -69,7 +69,6 @@ WIKI_HELP_SEC = _('manual|Fix_Capitalization_of_Family_Names')
 #
 #-------------------------------------------------------------------------
 def generate_paf5_uid(self, handle):
-    #uid = str(uuid.uuid4()).replace('-', '').upper()
     uid = create_uid(self, handle)
     checksum = calculate_checksum(uid)
     return uid[:32] + checksum
@@ -77,17 +76,19 @@ def generate_paf5_uid(self, handle):
 def calculate_checksum(uid):
     # Calculate the checksum based on the first 32 characters of the UID
     uid_without_checksum = uid[:32]
-    sum = 0
-    for i in range(len(uid_without_checksum)):
-        sum += int(uid_without_checksum[i], 16) * (i+1)
-    checksum = (sum % 65536).to_bytes(2, byteorder='big').hex().upper()
-    return checksum
+    sumA = sumB = 0
+    for i in range(0,len(uid_without_checksum),2):
+        value = uid_without_checksum[i:i+2]
+        sumA += int(value, 16)
+        sumB += sumA
+    checksum = ((sumA % 256) << 8) + (sumB % 256)
+    return '{:04X}'.format(checksum)
 
 class AddUIDs(tool.BatchTool, ManagedWindow):
 
     def __init__(self, dbstate, user, options_class, name, callback=None):
         uistate = user.uistate
-        self.label = _('Add missing UIDs')
+        self.label = _('Add valid UIDs')
         self.cb = callback
 
         ManagedWindow.__init__(self,uistate,[],self.__class__)
@@ -99,13 +100,12 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
 
         self.progress = ProgressMeter(
             _('Checking Person UIDs'), '', parent=uistate.window)
-        self.progress.set_pass(_('Searching persons without UIDs'),
+        self.progress.set_pass(_('Searching for persons without valid UIDs'),
                                len(self.db.get_person_handles(False)))
         self.name_list = []
 
         for handle in self.db.get_person_handles(False):
             person = self.db.get_person_from_handle(handle)
-            #person = Person(data)
             name = person.get_primary_name()
 
             attr_list = person.get_attribute_list()
@@ -113,13 +113,15 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
             uid = False
             for attr in attr_list:
 
-                attr_type = int(attr.get_type())
-                # name = libgedcom.PERSONALCONSTANTATTRIBUTES.get(attr_type)
                 key = attr.get_type().xml_str()
                 value = attr.get_value().strip().replace('\r', ' ')
 
                 if key == "_UID":
                     uid = True
+                    checksum = value[32:36]
+                    new_checksum = calculate_checksum(value)
+                    if checksum != new_checksum:
+                        self.name_list.append(name)
                     continue
 
             if not uid:
@@ -135,7 +137,7 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
             self.progress.close()
             self.close()
             OkDialog(_('No modifications needed'),
-                     _("All persons have a UID."),
+                     _("All persons have a valid UID."),
                      parent=uistate.window)
 
     def display(self):
@@ -180,18 +182,14 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
         display_help(WIKI_HELP_PAGE , WIKI_HELP_SEC)
 
     def on_ok_clicked(self, obj):
-        with DbTxn(_("Capitalization changes"), self.db, batch=True
+        with DbTxn(_("UID validation"), self.db, batch=True
                    ) as self.trans:
             self.db.disable_signals()
-            changelist = set(self.model.get_value(node,1)
-                            for node in self.iter_list
-                                if self.model.get_value(node,0))
 
-            #with self.db.get_person_cursor(update=True, commit=True) as cursor:
             #  for handle, data in cursor:
             for handle in self.db.get_person_handles(False):
                 person = self.db.get_person_from_handle(handle)
-                #person = Person(data)
+
                 change = False
 
                 # check for _UID
@@ -200,26 +198,28 @@ class AddUIDs(tool.BatchTool, ManagedWindow):
                 uid = False
                 for attr in attr_list:
 
-                    attr_type = int(attr.get_type())
-                    # name = libgedcom.PERSONALCONSTANTATTRIBUTES.get(attr_type)
                     key = attr.get_type().xml_str()
                     value = attr.get_value().strip().replace('\r', ' ')
 
                     if key == "_UID":
                         uid = True
+                        checksum = value[32:36]
+                        new_checksum = calculate_checksum(value)
+                        if checksum != new_checksum:
+                            new_value = value[0:32] + new_checksum
+                            attr.set_value(new_value)
+                            change = True
                         continue
 
                 if not uid:
-                    change = True
-
-                if change:
-                    #cursor.update(handle, person.serialize())
                     uid = generate_paf5_uid(self,handle)
                     attr = Attribute()
                     attr.set_type("_UID")
-                    print(uid)
                     attr.set_value(uid)
                     person.add_attribute(attr)
+                    change = True
+
+                if change:
                     self.db.commit_person(person, self.trans)
 
         self.db.enable_signals()

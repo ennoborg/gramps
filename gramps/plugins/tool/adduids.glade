@@ -31,8 +31,8 @@
             <property name="can_focus">False</property>
             <property name="margin_top">10</property>
             <property name="margin_bottom">10</property>
-            <property name="label" translatable="yes">Below is a list of persons that don't have a UID. 
-Select the persons for which you wish Gramps to add one. </property>
+            <property name="label" translatable="yes">These persons that don't have a valid UID.
+            Accept changes to add or correct.</property>
           </object>
           <packing>
             <property name="expand">False</property>
