@@ -35,9 +35,9 @@ MODULE_VERSION="5.1"
 
 register(TOOL,
 id = 'adduid',
-name = _("Add/check UIDs"),
+name = _("Check UIDs"),
 description = _("Searches the entire database for missing or invalid person UIDs,"
-                    "and adds those."),
+                    "and adds/fixes those where needed."),
 version = '1.0',
 gramps_target_version = MODULE_VERSION,
 status = STABLE,
