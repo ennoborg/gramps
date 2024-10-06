@@ -32,3 +32,5 @@ ehthumbs.db
 *.lock
 
 *.ffs_db
+
+gramps.egg-info/
