@@ -26869,7 +26869,7 @@ msgstr ""
 #: ../gramps/plugins/lib/libnarrate.py:595
 #, python-format
 msgid "He was baptized on %(baptism_date)s in %(baptism_place)s%(endnotes)s."
-msgstr "He werd gedoopt op %(baptism_date)s in %(baptism_place)s%(endnotes)s."
+msgstr "Hij werd gedoopt op %(baptism_date)s in %(baptism_place)s%(endnotes)s."
 
 #: ../gramps/plugins/lib/libnarrate.py:598
 #, python-format
