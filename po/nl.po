@@ -23255,7 +23255,7 @@ msgstr ""
 "U kunt op het configuratiepictogram in de werkbalk klikken om extra kolommen toe te "
 "voegen, terwijl u met de rechtermuisknop op de achtergrond klikt om gramplets toe "
 "te voegen. U kunt ook de knop Eigenschappen verslepen om de gramplet op deze pagina "
-"te verplaatsen, en de gramplet loskoppelen om hetboven Gramps te laten zweven."
+"te verplaatsen, en de gramplet loskoppelen om die boven Gramps te laten zweven."
 
 #. Minimum number of lines we want to see. Further lines with the same
 #. distance to the main person will be added on top of this.
